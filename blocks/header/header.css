@@ -2,7 +2,7 @@
 header .nav-wrapper {
   background-color: #fff;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   position: fixed;
   border-bottom: 1px solid var(--highlight-background-color);
 }
@@ -17,8 +17,7 @@ header nav {
   gap: 0 2em;
   margin: auto;
   max-width: 1280px;
-  height: var(--nav-height);
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   font-family: var(--body-font-family);
 }
 
@@ -31,10 +30,15 @@ header nav[aria-expanded="true"] {
   min-height: 100vh;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   header nav {
-    padding: 0 0;
-    margin: 18px auto;
+    margin: 16px auto;
+    height: var(--nav-height);
+  }
+}
+@media (min-width: 1280px) {
+  header nav {
+  padding: 0;
   }
 }
 
@@ -147,6 +151,8 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  text-align: center;
+
 }
 
 header nav .nav-brand img {
@@ -179,6 +185,9 @@ header nav .nav-sections ul  {
 
 header nav .nav-sections ul > li {
   font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  border-bottom: 1px solid var(--link-hover-color);
 }
 
 header nav .nav-sections ul > li > ul {
@@ -237,6 +246,9 @@ header nav .nav-sections ul > li > ul > li {
     flex: 0 1 auto;
     position: relative;
     font-weight: 500;
+    border: none;
+    font-size: var(--body-font-size-xs);
+    line-height: initial;
   }
 
   header nav .nav-sections > ul > li > ul {
@@ -277,12 +289,18 @@ header nav .nav-tools {
   grid-area: tools;
 }
 
-
 header .announcement-wrapper {
-  background-color: #171C28;
-  min-height: 40px;
-  
+  display: none;
 }
+
+@media (min-width: 600px) {
+  header .announcement-wrapper {
+    background-color: #171C28;
+    min-height: 40px;
+  }
+}
+
+
 
 header .announcement-wrapper p {
   max-width: 1200px;
