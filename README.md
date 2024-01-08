@@ -2,8 +2,8 @@
 Built using Next Generation Composability from AEM
 
 ## Environments
-- Preview: https://main--securbank-www--markszulc.hlx.page/
-- Live: https://www.securbankdemo.com/
+- Preview: https://main--securbank-www--techanubhav.hlx.page/
+- Live: https://main--securbank-www--techanubhav.hlx.live/
 
 ## Installation
 
